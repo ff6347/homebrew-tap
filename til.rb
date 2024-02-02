@@ -5,21 +5,21 @@
 class Til < Formula
   desc "til (today I learned) CLI"
   homepage "https://github.com/ff6347/til"
-  version "1.2.2"
+  version "1.2.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ff6347/til/releases/download/v1.2.2/til_darwin_arm64.tar.gz"
-      sha256 "f3799e306ad2a7a16d295126573b2a41a15c6fd0aa5f6785ffefd8b6dac33d80"
+      url "https://github.com/ff6347/til/releases/download/v1.2.3/til_darwin_arm64.tar.gz"
+      sha256 "edd274cfe62ae8d0f095982751327d8ee7f56720c652e556b362b0c9d0ce27cc"
 
       def install
         bin.install "til"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ff6347/til/releases/download/v1.2.2/til_darwin_amd64.tar.gz"
-      sha256 "10c0c01c95cef8d423163587fd1fb2dac42356d8e65d3755e50e909bb3654c46"
+      url "https://github.com/ff6347/til/releases/download/v1.2.3/til_darwin_amd64.tar.gz"
+      sha256 "c79311c437c7465d6e0216a2d106cf67b38186ea4647812a6815285243cce0c7"
 
       def install
         bin.install "til"
@@ -29,16 +29,16 @@ class Til < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ff6347/til/releases/download/v1.2.2/til_linux_arm64.tar.gz"
-      sha256 "2fdcbfaea908634e34873a9d547d5cbffc64277c9dd59b5dab16cbcdcbf46395"
+      url "https://github.com/ff6347/til/releases/download/v1.2.3/til_linux_arm64.tar.gz"
+      sha256 "e6ea4cc1a8dd06cd776375928c96e813b0366059cca5ae7aa635938f84eb2b8a"
 
       def install
         bin.install "til"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ff6347/til/releases/download/v1.2.2/til_linux_amd64.tar.gz"
-      sha256 "ea0656088d7535ca7edafa51f7beb4e69af82f69b34d96008d40fc1acdb63598"
+      url "https://github.com/ff6347/til/releases/download/v1.2.3/til_linux_amd64.tar.gz"
+      sha256 "daf5fd7b94a14a0f7c95a61805c78deeda4050c19052a456111bd210df76e365"
 
       def install
         bin.install "til"
