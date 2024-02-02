@@ -5,21 +5,21 @@
 class Til < Formula
   desc "til (today I learned) CLI"
   homepage "https://github.com/ff6347/til"
-  version "1.2.0"
+  version "1.2.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ff6347/til/releases/download/v1.2.0/til_darwin_arm64.tar.gz"
-      sha256 "5523d05ebdbd130ab415b462694ae3b5ae7c4676a953f01b2493696d12f3d2e7"
+      url "https://github.com/ff6347/til/releases/download/v1.2.2/til_darwin_arm64.tar.gz"
+      sha256 "f3799e306ad2a7a16d295126573b2a41a15c6fd0aa5f6785ffefd8b6dac33d80"
 
       def install
         bin.install "til"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ff6347/til/releases/download/v1.2.0/til_darwin_amd64.tar.gz"
-      sha256 "e69fba0296edda9a4bdeb6d738d8c768da2740ccba3844240e1edbb439138803"
+      url "https://github.com/ff6347/til/releases/download/v1.2.2/til_darwin_amd64.tar.gz"
+      sha256 "10c0c01c95cef8d423163587fd1fb2dac42356d8e65d3755e50e909bb3654c46"
 
       def install
         bin.install "til"
@@ -28,17 +28,17 @@ class Til < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ff6347/til/releases/download/v1.2.0/til_linux_amd64.tar.gz"
-      sha256 "19b398508df02978b345f9af47bb7aaa35e01b7ad9d07961a3bf3755a5744448"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ff6347/til/releases/download/v1.2.2/til_linux_arm64.tar.gz"
+      sha256 "2fdcbfaea908634e34873a9d547d5cbffc64277c9dd59b5dab16cbcdcbf46395"
 
       def install
         bin.install "til"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ff6347/til/releases/download/v1.2.0/til_linux_arm64.tar.gz"
-      sha256 "1b9099da67130e706616c8b83c2d2bbbd38a228b8c2eeb9c88e0300851aa7865"
+    if Hardware::CPU.intel?
+      url "https://github.com/ff6347/til/releases/download/v1.2.2/til_linux_amd64.tar.gz"
+      sha256 "ea0656088d7535ca7edafa51f7beb4e69af82f69b34d96008d40fc1acdb63598"
 
       def install
         bin.install "til"
